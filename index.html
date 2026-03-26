@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="shortcut icon" href="img/CIC_CICLES_FAVICON.png" type="image/x-icon">
+    <title>CIC Fest</title>
+</head>
+
+<body>
+    <header class="topbar">
+        <div class="container topbar-inner">
+            <div class="brand">
+                <span class="brand-date" data-edit="festival.date">7.5.26</span>
+                <span class="brand-title" data-edit="festival.title">CIC FEST 2026</span>
+            </div>
+            <nav class="nav">
+                <a href="#about">About</a>
+                <a href="#day">Day</a>
+                <a href="#night">Night</a>
+                <a href="#artists">Artistes</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="poster-grid"></div>
+        <div class="shape circle-soft" data-speed="0.4" data-direction="down"></div>
+        <div class="shape circle-grid" data-speed="0.7" data-direction="up"></div>
+        <div class="shape circle-striped" data-speed="0.5" data-direction="down"></div>
+
+        <div class="container hero-inner">
+            <div class="hero-main reveal">
+                <!-- <p class="hero-subclaim">
+                    Inspiració al DAY | Networking al NIGHT
+                </p> -->
+
+                <div class="hero-lockup">
+                    <div class="hero-date-vertical" data-edit="festival.date">7.5.26</div>
+                    <div>
+                        <h1 class="hero-title" data-edit="festival.title">CIC FEST</h1>
+                        <p class="hero-claim" data-edit="festival.heroClaim">
+
+                        </p>
+                    </div>
+                </div>
+
+                <div class="cta-row">
+                    <a class="button day" data-link="festival.eventbrite.day" href="#" target="_blank"
+                        rel="noreferrer">Reserva al Day</a>
+                    <a class="button outline" data-link="festival.eventbrite.night" href="#" target="_blank"
+                        rel="noreferrer">Reserva al Night</a>
+                </div>
+            </div>
+
+            <div class="hero-main reveal" data-speed="0.1" data-direction="down">
+                <article class="info-box">
+                    <p class="eyebrow" style="color: var(--day-bg)">CIC Fest Day</p>
+                    <h2>Talks + Workshops</h2>
+                    <p>
+                        Obert a estudiants no universitaris d’art i disseny, amb quatre xerrades i quatre tallers
+                        pràctics. Consulta el lineup per veure’n els participants.
+                    </p>
+                </article>
+
+                <article class="info-box">
+                    <p class="eyebrow" style="color: var(--night-ink)">CIC Fest Night</p>
+                    <h2>Portfolio Night</h2>
+                    <p>
+                        Obert a estudiants universitaris d’art i disseny, amb revisions de portfoli en un format speed
+                        dating amb professionals de renom.
+                    </p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="section">
+        <div class="container section-title reveal">
+            <div>
+                <p class="eyebrow" style="color: var(--day-bg)">About CIC Fest</p>
+                <h2></h2>
+            </div>
+            <h2 data-edit="festival.introTitle"></h2>
+
+            <p data-edit="festival.introText1"></p>
+            <p data-edit="festival.introText2"></p>
+        </div>
+    </section>
+
+    <section id="day" class="split">
+        <div class="split-visual day-pattern" data-speed="0.12"></div>
+        <div class="split-copy">
+            <div class="split-copy-inner reveal">
+                <p class="eyebrow" style="color: var(--day-bg)">DAY</p>
+                <h2 style="color: var(--day-bg)">Inspiració</h2>
+                <p>
+                    Quatre xerrades y quatre tallers per a estudiants no universitaris d'art i disseny. Un dia per descobrir pràctiques, preguntes, eines i noves maneres de fer.
+                </p>
+
+                <div class="stats">
+                    <div class="stat">
+                        <div class="stat-label">Talks</div>
+                        <div class="stat-value" style="color: var(--day-bg)">4</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-label">Workshops</div>
+                        <div class="stat-value" style="color: var(--day-bg)">4</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-label">Públic</div>
+                        <div class="stat-value">Estudiants no universitaris</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-label">Reserva</div>
+                        <div class="stat-value">Gratuïta</div>
+                    </div>
+                </div>
+
+                <div class="cta-row">
+                    <a class="button day" data-link="festival.eventbrite.day" href="#" target="_blank"
+                        rel="noreferrer">Reserva al DAY</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="night" class="split">
+        <div class="split-copy">
+            <div class="split-copy-inner reveal hero-night-title">
+                <p class="eyebrow" style="color: var(--night-ink)">NIGHT</p>
+                <h2 style="color: var(--night-ink)">Networking</h2>
+                <p>
+                    Una Portfolio Night oberta a estudiants universitaris d’art i disseny, pensada per connectar el talent emergent amb el món professional a Barcelona.
+                </p>
+
+                <div class="stats">
+                    <div class="stat">
+                        <div class="stat-label">Format</div>
+                        <div class="stat-value" style="color: var(--night-ink)">Portfolio Night</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-label">Públic</div>
+                        <div class="stat-value">Estudiants universitaris</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-label">Mentors</div>
+                        <div class="stat-value" style="color: var(--day-bg)">Estudis de renom</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-label">Reserva</div>
+                        <div class="stat-value">Gratuïta</div>
+                    </div>
+                </div>
+
+                <div class="cta-row">
+                    <a class="button night" data-link="festival.eventbrite.night" href="#" target="_blank"
+                        rel="noreferrer">Reserva al NIGHT</a>
+                </div>
+            </div>
+        </div>
+        <div class="split-visual night-pattern" data-speed="0.12"></div>
+    </section>
+
+    <section id="artists" class="section">
+        <div class="container">
+            <div class="lineup-header reveal">
+                <div>
+                    <p class="eyebrow" style="color: var(--day-bg)">Artistes & Sessions</p>
+                    <h2>Coneix els artistes, ponents i professionals que formen el CIC Fest 2026.</h2>
+                </div>
+                
+            </div>
+
+            <div class="reveal">
+                <h3 class="divider-title" style="color: var(--day-bg)"><span>CIC Fest Day</span></h3>
+                <div class="cards-grid" id="day-cards"></div>
+            </div>
+
+            <div class="reveal" style="margin-top: 72px">
+                <h3 class="divider-title" style="color: var(--night-ink)"><span>CIC Fest Night</span></h3>
+                <div class="cards-grid" id="night-cards"></div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div>
+                <p class="footer-title">CIC FEST.</p>
+                <p class="footer-copy">CIC Cicles Formatius.</p>
+            </div>
+            <div class="footer-actions">
+                <a class="button outline" style="border-color: white; color: white" data-link="festival.eventbrite.day"
+                    href="#" target="_blank" rel="noreferrer">Day tickets</a>
+                <a class="button outline" style="border-color: white; color: white"
+                    data-link="festival.eventbrite.night" href="#" target="_blank" rel="noreferrer">Night tickets</a>
+            </div>
+        </div>
+    </footer>
+    <script src="app.js"></script>
+</body>
+
+</html>
