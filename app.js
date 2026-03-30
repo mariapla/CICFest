@@ -1,3 +1,5 @@
+/* ------------------ CONTENIDO ------------------ */
+
 const festival = {
     date: '7.5.26',
     title: 'CIC FEST',
@@ -5,26 +7,103 @@ const festival = {
 
     introTitle: 'Un festival per connectar creativitat, coneixement i comunitat.',
 
-    introText1: 'CIC Fest neix amb la voluntat de connectar persones vinculades a l’art, el disseny i la transferència de coneixement amb estudiants, especialment no universitaris. Al llarg del dia, professionals destacats compartiran experiències, idees i mirades per inspirar la pròxima generació creativa.',
+    introText1: 'CIC Fest neix amb la voluntat de connectar persones vinculades a l’art, el disseny i la transferència de coneixement amb estudiants.',
 
-    introText2: 'És un esdeveniment obert a estudiants d’altres escoles que vol convertir-se en un punt de trobada per descobrir què fan altres creatius, compartir inquietuds i generar comunitat.'
+    introText2: 'Al DAY els tallers ofereixen un espai pràctic i al NIGHT la Portfolio Night connecta estudiants amb professionals.',
+
+    eventbrite: {
+        day: '#',
+        night: '#'
+    }
 };
+
+/* ------------------ SPEAKERS ------------------ */
 
 const speakers = [
     {
-        id: 1,
         name: 'María Cañizares',
         role: 'Talk',
-        title: 'Diseño de interiores',
+        title: 'Diseño de interiores: construir relatos habitables',
         time: '08:30',
         track: 'day',
-        image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330',
-        description: '',
+        image: 'img/maria_canizares.jpg',
+        ticketUrl: '#'
+    },
+    {
+        name: 'Juan Cardosa',
+        role: 'Workshop',
+        title: 'Micropoesia i collage',
+        time: '09:00',
+        track: 'day',
+        image: 'img/juan_cardosa.jpg',
+        ticketUrl: '#'
+    },
+    {
+        name: 'Riki Blanco',
+        role: 'Talk',
+        title: 'Caminar sobre nenúfares | Una charla sobre la aventura del proceso creativo',
+        time: '10:00',
+        track: 'day',
+        image: 'img/Riki_Blanco.jpg',
+        ticketUrl: '#'
+    },
+    {
+        name: 'Txu Morillas',
+        role: 'Workshop',
+        title: 'Paisatges: arquitectura del moviment',
+        time: '11:00',
+        track: 'day',
+        image: 'img/txu_morillas.jpg',
+        ticketUrl: '#'
+    },
+    {
+        name: 'Santi Vilanova',
+        role: 'Workshop',
+        title: 'Playmodes',
+        time: '11:15',
+        track: 'day',
+        image: 'img/santi_vilanova.png',
+        ticketUrl: '#'
+    },
+    {
+        name: 'Mireia Domènech i Silvana Solias',
+        role: 'Talk',
+        title: 'Dissenyar cultura',
+        time: '11:30',
+        track: 'day',
+        image: 'img/misterio_studio.jpg',
+        ticketUrl: '#'
+    },
+    {
+        name: 'Riki Blanco',
+        role: 'Workshop',
+        title: 'Taller concentrado de ilustración conceptual',
+        time: '10:00',
+        track: 'day',
+        image: 'img/Riki_Blanco.jpg',
+        ticketUrl: '#'
+    },
+    {
+        name: 'Carlos Pareja',
+        role: 'Talk',
+        title: 'No vull ser com tu i la meva divertida vida com a fotògraf',
+        time: '13:00',
+        track: 'day',
+        image: 'img/Carlos_Pareja.jpg',
+        ticketUrl: '#'
+    },
+    {
+        name: 'Portfolio Night',
+        role: 'Review',
+        title: 'Mentoring',
+        time: '18:00',
+        track: 'night',
+        image: 'img/night.jpg',
         ticketUrl: '#'
     }
 ];
 
-/* ------------------ CONTENT ------------------ */
+/* ------------------ CONTENT APPLY ------------------ */
 
 function applyFestivalContent() {
     document.querySelectorAll('[data-edit]').forEach((el) => {
@@ -32,22 +111,46 @@ function applyFestivalContent() {
         const value = path.split('.').reduce((acc, key) => acc && acc[key], { festival });
         if (value) el.textContent = value;
     });
+
+    document.querySelectorAll('[data-link]').forEach((el) => {
+        const path = el.dataset.link;
+        const value = path.split('.').reduce((acc, key) => acc && acc[key], { festival });
+        if (value) el.href = value;
+    });
 }
 
 /* ------------------ CARDS ------------------ */
 
 function createArtistCard(item) {
+    const isDay = item.track === 'day';
+
     const article = document.createElement('article');
     article.className = 'artist-card reveal';
 
     article.innerHTML = `
         <div class="artist-media">
             <img src="${item.image}" alt="${item.name}">
+            <div class="artist-tag" style="background:${isDay ? 'var(--violeta)' : 'var(--azul-rosa)'}">
+                ${item.role}
+            </div>
         </div>
         <div class="artist-content">
-            <div class="artist-time">${item.time}</div>
+            <div class="artist-time" style="color:${isDay ? 'var(--violeta)' : 'var(--azul-rosa)'}">
+                ${item.time}
+            </div>
             <h4 class="artist-name">${item.name}</h4>
             <p class="artist-title">${item.title}</p>
+            ${item.description ? `<p class="artist-description">${item.description}</p>` : ''}
+            <div class="artist-actions">
+                <a
+                    class="button ${isDay ? 'button-day' : 'button-night'}"
+                    href="${item.ticketUrl || '#'}"
+                    target="_blank"
+                    rel="noreferrer"
+                >
+                    Reserva
+                </a>
+            </div>
         </div>
     `;
 
@@ -55,22 +158,32 @@ function createArtistCard(item) {
 }
 
 function renderCards() {
-    const dayContainer = document.getElementById('day-cards');
-    if (!dayContainer) return;
+    const day = document.getElementById('day-cards');
+    const night = document.getElementById('night-cards');
 
-    speakers.forEach((item) => {
-        dayContainer.appendChild(createArtistCard(item));
+    if (!day || !night) return;
+
+    day.innerHTML = '';
+    night.innerHTML = '';
+
+    speakers.forEach((s, i) => {
+        const card = createArtistCard(s);
+        card.style.transitionDelay = `${i * 0.05}s`;
+
+        if (s.track === 'day') {
+            day.appendChild(card);
+        } else {
+            night.appendChild(card);
+        }
     });
 }
 
-/* ------------------ REVEAL SCROLL ------------------ */
-
-let revealObserver;
+/* ------------------ REVEAL ------------------ */
 
 function setupReveal() {
     const elements = document.querySelectorAll('.reveal');
 
-    revealObserver = new IntersectionObserver((entries) => {
+    const observer = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('visible');
@@ -81,10 +194,10 @@ function setupReveal() {
         rootMargin: "0px 0px -8% 0px"
     });
 
-    elements.forEach((el) => revealObserver.observe(el));
+    elements.forEach((el) => observer.observe(el));
 }
 
-/* ------------------ SMOOTH SCROLL (CINEMATIC) ------------------ */
+/* ------------------ SCROLL CINEMÁTICO ------------------ */
 
 function smoothScrollTo(targetY, duration = 1400) {
     const startY = window.scrollY;
@@ -97,97 +210,47 @@ function smoothScrollTo(targetY, duration = 1400) {
             : 1 - Math.pow(-2 * t + 2, 3) / 2;
     }
 
-    function step(currentTime) {
-        const progress = Math.min((currentTime - startTime) / duration, 1);
+    function step(time) {
+        const progress = Math.min((time - startTime) / duration, 1);
         const eased = ease(progress);
 
         window.scrollTo(0, startY + distance * eased);
 
-        if (progress < 1) {
-            requestAnimationFrame(step);
-        }
+        if (progress < 1) requestAnimationFrame(step);
     }
 
     requestAnimationFrame(step);
 }
 
-/* ------------------ NAV REVEAL ------------------ */
-
-function resetRevealInSection(section) {
-    const items = section.querySelectorAll('.reveal');
-
-    items.forEach((el) => el.classList.remove('visible'));
-
-    requestAnimationFrame(() => {
-        requestAnimationFrame(() => {
-            items.forEach((el, i) => {
-                setTimeout(() => {
-                    el.classList.add('visible');
-                }, i * 60);
-            });
-        });
-    });
-}
+/* ------------------ NAV + REVEAL ------------------ */
 
 function setupNavReveal() {
-    const links = document.querySelectorAll('.nav a[href^="#"]');
-
-    links.forEach((link) => {
-        link.addEventListener('click', (e) => {
+    document.querySelectorAll('.nav a').forEach(link => {
+        link.addEventListener('click', e => {
             const target = document.querySelector(link.getAttribute('href'));
             if (!target) return;
 
             e.preventDefault();
 
             const offset = document.querySelector('.topbar')?.offsetHeight || 0;
-            const targetY = target.getBoundingClientRect().top + window.scrollY - offset;
+            const y = target.getBoundingClientRect().top + window.scrollY - offset;
 
-            // quitar visible antes
             target.querySelectorAll('.reveal').forEach(el => el.classList.remove('visible'));
 
-            // scroll lento
-            smoothScrollTo(targetY, 1500);
+            smoothScrollTo(y, 1500);
 
-            // reactivar reveal
             setTimeout(() => {
-                resetRevealInSection(target);
-            }, 900);
+                target.querySelectorAll('.reveal').forEach((el, i) => {
+                    setTimeout(() => el.classList.add('visible'), i * 60);
+                });
+            }, 800);
         });
     });
-}
-
-/* ------------------ FLOAT ------------------ */
-
-function setupFloat() {
-    const elements = document.querySelectorAll('[data-float]');
-    let ticking = false;
-
-    function update() {
-        const scrollY = window.scrollY;
-
-        elements.forEach((el) => {
-            const speed = parseFloat(el.dataset.float || '0');
-            const movement = scrollY * speed;
-            el.style.transform = `translateY(${movement}px)`;
-        });
-
-        ticking = false;
-    }
-
-    function requestTick() {
-        if (!ticking) {
-            requestAnimationFrame(update);
-            ticking = true;
-        }
-    }
-
-    window.addEventListener('scroll', requestTick, { passive: true });
 }
 
 /* ------------------ INIT ------------------ */
 
 applyFestivalContent();
 renderCards();
-setupReveal();      // ← ESTO ES CLAVE (NO BORRAR)
-setupNavReveal();   // ← navegación animada
-setupFloat();
+setupReveal();
+setupNavReveal();
