@@ -1,14 +1,3 @@
-const theme = {
-    dayBg: '#e52421',
-    nightInk: '#2a4b9b',
-    paper: '#f4f1ec',
-    textLight: '#fffdf9',
-    textDark: '#25286e',
-    border: '#25286e',
-    gridRed: 'rgba(241, 38, 38, 0.14)',
-    gridBlue: 'rgba(37, 40, 110, 0.08)'
-};
-
 const festival = {
     date: '7.5.26',
     title: 'CIC FEST',
@@ -31,11 +20,11 @@ const speakers = [
         id: 1,
         name: 'María Cañizares',
         role: 'Talk',
-        title: 'Diseño de interiores: construir relatos habitables',
+        title: 'Diseño de interiores: construir relatos habitables',
         time: '08:30',
         track: 'day',
-        image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=1200&q=80',
-        // description: 'Short description for this talk. Replace with the real artist bio and session summary.',
+        image: 'img/maria_canizares.jpg',
+        description: '',
         ticketUrl: 'https://www.eventbrite.com/'
     },
     {
@@ -45,8 +34,8 @@ const speakers = [
         title: 'Micropoesia i collage',
         time: '09:00',
         track: 'day',
-        image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=1200&q=80',
-        // description: 'Short description for this talk. Replace with the real artist bio and session summary.',
+        image: 'img/juan_cardosa.jpg',
+        description: '',
         ticketUrl: 'https://www.eventbrite.com/'
     },
     {
@@ -56,8 +45,8 @@ const speakers = [
         title: 'Caminar sobre nenúfares | Una charla sobre la aventura del proceso creativo',
         time: '10:00',
         track: 'day',
-        image: 'https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=1200&q=80',
-        // description: 'Short description for this workshop. Replace with the real content and requirements.',
+        image: 'img/Riki_Blanco.jpg',
+        description: '',
         ticketUrl: 'https://www.eventbrite.com/'
     },
     {
@@ -67,8 +56,8 @@ const speakers = [
         title: 'Paisatges: arquitectura del moviment',
         time: '11:00',
         track: 'day',
-        image: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=1200&q=80',
-        // description: 'Short description for this portfolio review. Replace with the real mentor and focus.',
+        image: 'img/txu_morillas.jpg',
+        description: '',
         ticketUrl: 'https://www.eventbrite.com/'
     },
     {
@@ -78,8 +67,8 @@ const speakers = [
         title: 'Playmodes',
         time: '11:15',
         track: 'day',
-        image: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=1200&q=80',
-        // description: 'Short description for this portfolio review. Replace with the real mentor and focus.',
+        image: 'img/santi_vilanova.png',
+        description: '',
         ticketUrl: 'https://www.eventbrite.com/'
     },
     {
@@ -89,8 +78,8 @@ const speakers = [
         title: 'Dissenyar Cultura',
         time: '11:30',
         track: 'day',
-        image: 'https://images.unsplash.com/photo-1502685104226-ee32379fefbe?auto=format&fit=crop&w=1200&q=80',
-        // description: 'Short description for this portfolio review. Replace with the real mentor and focus.',
+        image: 'img/misterio_studio.jpg',
+        description: '',
         ticketUrl: 'https://www.eventbrite.com/'
     },
     {
@@ -108,41 +97,25 @@ const speakers = [
         id: 8,
         name: 'Riki Blanco',
         role: 'Workshop',
-        title: 'Taller concentrado de ilustración conceptual',
+        title: 'Taller concentrado de ilustración conceptual',
         time: '12:15',
         track: 'day',
-        image: 'https://images.unsplash.com/photo-1502685104226-ee32379fefbe?auto=format&fit=crop&w=1200&q=80',
-        // description: 'Short description for this portfolio review. Replace with the real mentor and focus.',
+        image: 'img/Riki_Blanco.jpg',
+        description: '',
         ticketUrl: 'https://www.eventbrite.com/'
     },
-     {
-        id:9,
+    {
+        id: 9,
         name: 'Carlos Pareja',
         role: 'Talk',
         title: 'No vull ser com tu i la meva divertida vida com a fotògraf',
         time: '13:00',
         track: 'day',
-        image: 'https://images.unsplash.com/photo-1502685104226-ee32379fefbe?auto=format&fit=crop&w=1200&q=80',
-        // description: 'Short description for this portfolio review. Replace with the real mentor and focus.',
+        image: 'img/Carlos_Pareja.jpg',
+        description: '',
         ticketUrl: 'https://www.eventbrite.com/'
     }
 ];
-
-function applyTheme() {
-    const root = document.documentElement;
-    root.style.setProperty('--day-bg', theme.dayBg);
-    root.style.setProperty('--night-ink', theme.nightInk);
-    root.style.setProperty('--paper', theme.paper);
-    root.style.setProperty('--text-light', theme.textLight);
-    root.style.setProperty('--text-dark', theme.textDark);
-    root.style.setProperty('--border', theme.border);
-    root.style.setProperty('--grid-red', theme.gridRed);
-    root.style.setProperty('--grid-blue', theme.gridBlue);
-}
-
-function getValue(path) {
-    return path.split('.').reduce((acc, key) => acc && acc[key], window);
-}
 
 function applyFestivalContent() {
     document.querySelectorAll('[data-edit]').forEach((el) => {
@@ -158,30 +131,30 @@ function applyFestivalContent() {
     });
 }
 
-function createArtistCard(item, index) {
-    const offsets = ['offset-a', 'offset-b', 'offset-c'];
-    const accent = item.track === 'day' ? theme.dayBg : theme.nightInk;
-    const tagBg = item.track === 'day' ? theme.dayBg : theme.nightInk;
+function createArtistCard(item) {
+    const accent = item.track === 'day' ? 'var(--violeta)' : 'var(--azul-rosa)';
+    const buttonClass = item.track === 'day' ? 'button-day' : 'button-night';
+    const tagBg = item.track === 'day' ? 'var(--violeta)' : 'var(--azul-rosa)';
+    const safeDescription = item.description ? item.description : '';
 
     const article = document.createElement('article');
-    article.className = `artist-card ${offsets[index % 3]}`;
+    article.className = 'artist-card reveal';
 
     article.innerHTML = `
-          <div class="artist-media">
+        <div class="artist-media">
             <img src="${item.image}" alt="${item.name}">
-            <div class="artist-overlay"></div>
             <div class="artist-tag" style="background:${tagBg}">${item.role}</div>
-          </div>
-          <div class="artist-content">
+        </div>
+        <div class="artist-content">
             <div class="artist-time" style="color:${accent}">${item.time}</div>
             <h4 class="artist-name">${item.name}</h4>
             <p class="artist-title">${item.title}</p>
-            <p class="artist-description">${item.description}</p>
+            <p class="artist-description">${safeDescription}</p>
             <div class="artist-actions">
-              <a class="button ${item.track === 'day' ? 'day' : 'night'}" href="${item.ticketUrl}" target="_blank" rel="noreferrer">Reserva</a>
+                <a class="button ${buttonClass}" href="${item.ticketUrl}" target="_blank" rel="noreferrer">Reserva</a>
             </div>
-          </div>
-        `;
+        </div>
+    `;
 
     return article;
 }
@@ -190,51 +163,106 @@ function renderCards() {
     const dayContainer = document.getElementById('day-cards');
     const nightContainer = document.getElementById('night-cards');
 
+    if (!dayContainer || !nightContainer) return;
+
     const dayItems = speakers.filter((item) => item.track === 'day');
     const nightItems = speakers.filter((item) => item.track === 'night');
 
-    dayItems.forEach((item, index) => dayContainer.appendChild(createArtistCard(item, index)));
-    nightItems.forEach((item, index) => nightContainer.appendChild(createArtistCard(item, index)));
-}
+    dayContainer.innerHTML = '';
+    nightContainer.innerHTML = '';
 
-function setupParallax() {
-    const layers = document.querySelectorAll('[data-speed]');
+    dayItems.forEach((item, index) => {
+        const card = createArtistCard(item);
+        card.style.transitionDelay = `${Math.min(index * 0.05, 0.3)}s`;
+        dayContainer.appendChild(card);
+    });
 
-    function updateParallax() {
-        const scrollY = window.scrollY;
-
-        layers.forEach((el) => {
-            const speed = parseFloat(el.dataset.speed || '0');
-            const direction = el.dataset.direction === 'up' ? -1 : 1;
-
-            const movement = scrollY * speed * direction;
-
-            el.style.transform = `translate3d(0, ${movement}px, 0) scale(${1 + speed * 0.3})`;
-        });
-    }
-
-    updateParallax();
-    window.addEventListener('scroll', updateParallax, { passive: true });
+    nightItems.forEach((item, index) => {
+        const card = createArtistCard(item);
+        card.style.transitionDelay = `${Math.min(index * 0.05, 0.3)}s`;
+        nightContainer.appendChild(card);
+    });
 }
 
 function setupReveal() {
     const elements = document.querySelectorAll('.reveal');
-    const observer = new IntersectionObserver(
-        (entries) => {
-            entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        },
-        { threshold: 0.12 }
-    );
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 0.14
+    });
 
     elements.forEach((el) => observer.observe(el));
 }
 
-applyTheme();
+function setupFloat() {
+    const elements = document.querySelectorAll('[data-float]');
+    let ticking = false;
+
+    function update() {
+        const scrollY = window.scrollY;
+
+        elements.forEach((el) => {
+            if (el.classList.contains('hero-circle')) return;
+
+            const speed = parseFloat(el.dataset.float || '0');
+            const rect = el.getBoundingClientRect();
+            const offsetFromViewport = rect.top + rect.height / 2 - window.innerHeight / 2;
+            const movement = (scrollY * speed * 0.15) + (offsetFromViewport * speed * -0.08);
+
+            el.style.transform = `translate3d(0, ${movement}px, 0)`;
+        });
+
+        ticking = false;
+    }
+
+    function requestTick() {
+        if (!ticking) {
+            window.requestAnimationFrame(update);
+            ticking = true;
+        }
+    }
+
+    update();
+    window.addEventListener('scroll', requestTick, { passive: true });
+    window.addEventListener('resize', requestTick);
+}
+
+function setupHeroCircleScroll() {
+    const circle = document.querySelector('.hero-circle');
+    if (!circle) return;
+
+    let ticking = false;
+
+    function update() {
+        const scrollY = window.scrollY;
+        const rotate = Math.max(-8, Math.min(8, scrollY * 0.01));
+        const y = Math.max(-10, Math.min(18, scrollY * 0.025));
+
+        circle.style.transform = `translate3d(0, ${y}px, 0) rotate(${rotate}deg) scale(1.02)`;
+        ticking = false;
+    }
+
+    function requestTick() {
+        if (!ticking) {
+            window.requestAnimationFrame(update);
+            ticking = true;
+        }
+    }
+
+    update();
+    window.addEventListener('scroll', requestTick, { passive: true });
+    window.addEventListener('resize', requestTick);
+}
+
 applyFestivalContent();
 renderCards();
-setupParallax();
 setupReveal();
+setupFloat();
+setupHeroCircleScroll();
