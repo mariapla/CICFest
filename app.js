@@ -27,7 +27,8 @@ const speakers = [
         time: '08:30',
         track: 'day',
         image: 'img/maria_canizares.jpg',
-        ticketUrl: '#'
+        ticketUrl: '#',
+        description: 'Explorar com l’espai pot narrar històries i generar experiència.'
     },
     {
         name: 'Juan Cardosa',
@@ -36,7 +37,8 @@ const speakers = [
         time: '09:00',
         track: 'day',
         image: 'img/juan_cardosa.jpg',
-        ticketUrl: '#'
+        ticketUrl: '#', 
+        description: 'Jugar amb paraula i imatge per crear relats mínims i poètics.'
     },
     {
         name: 'Riki Blanco',
@@ -45,7 +47,9 @@ const speakers = [
         time: '10:00',
         track: 'day',
         image: 'img/Riki_Blanco.jpg',
-        ticketUrl: '#'
+        ticketUrl: '#',
+        description: 'Una mirada al procés creatiu des de la intuïció, l’error i el joc.'
+
     },
     {
         name: 'Txu Morillas',
@@ -54,7 +58,8 @@ const speakers = [
         time: '11:00',
         track: 'day',
         image: 'img/txu_morillas.jpg',
-        ticketUrl: '#'
+        ticketUrl: '#',
+        description: 'Investigar el moviment i la seva traducció en llenguatge visual.'
     },
     {
         name: 'Santi Vilanova',
@@ -63,16 +68,18 @@ const speakers = [
         time: '11:15',
         track: 'day',
         image: 'img/santi_vilanova.png',
-        ticketUrl: '#'
+        ticketUrl: '#',
+        description: 'Experimentar amb sistemes generatius on codi, art i so es troben.'
     },
     {
-        name: 'Mireia Domènech i Silvana Solias',
+        name: 'Misterio Studio',
         role: 'Talk',
         title: 'Trabajo creativo: Un ejercicio de preguntas y respuestas',
         time: '11:30',
         track: 'day',
         image: 'img/misterio_studio.jpg',
-        ticketUrl: '#'
+        ticketUrl: '#',
+        description: "Reflexionar sobre com es dissenya cultura i es construeixen contextos."
     },
     {
         name: 'Riki Blanco',
@@ -81,7 +88,8 @@ const speakers = [
         time: '10:00',
         track: 'day',
         image: 'img/Riki_Blanco.jpg',
-        ticketUrl: '#'
+        ticketUrl: '#',
+        description: "Exercicis de síntesi visual per pensar idees complexes des de la imatge."
     },
     {
         name: 'Carlos Pareja',
@@ -90,7 +98,8 @@ const speakers = [
         time: '13:00',
         track: 'day',
         image: 'img/Carlos_Pareja.jpg',
-        ticketUrl: '#'
+        ticketUrl: '#',
+        description: "Una aproximació honesta i personal a la pràctica fotogràfica actual."
     },
     {
         name: 'Portfolio Night',
@@ -99,7 +108,8 @@ const speakers = [
         time: '18:00',
         track: 'night',
         image: 'img/cicfestnight.jpg',
-        ticketUrl: '#'
+        ticketUrl: '#',
+        description: 'Revisions ràpides de portafoli per connectar amb professionals del sector.'
     }
 ];
 

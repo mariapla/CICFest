@@ -184,13 +184,11 @@ a {
     content: "";
     position: absolute;
     inset: 0;
-    background: linear-gradient(
-        to right,
-        var(--crema) 0%,
-        var(--crema) 50%,
-        var(--rosa) 50%,
-        var(--rosa) 100%
-    );
+    background: linear-gradient(to right,
+            var(--crema) 0%,
+            var(--crema) 50%,
+            var(--rosa) 50%,
+            var(--rosa) 100%);
 }
 
 .hero-circle::after {
@@ -261,6 +259,15 @@ a {
 .section-night {
     background: var(--violeta);
     color: var(--blanco);
+}
+
+.section-day .artist-description {
+    color: var(--violeta);
+}
+
+.section-night .artist-description {
+    color: var(--blanco);
+    opacity: 0.8;
 }
 
 .eyebrow {
@@ -480,7 +487,7 @@ a {
     z-index: 2;
 }
 
-.lineup-block + .lineup-block {
+.lineup-block+.lineup-block {
     margin-top: 72px;
 }
 
@@ -536,7 +543,7 @@ a {
 
 .artist-media {
     position: relative;
-    aspect-ratio: 4 / 5;
+   aspect-ratio: 4 / 4.2;
     overflow: hidden;
     background: var(--rosa-suave);
 }
@@ -585,18 +592,19 @@ a {
 }
 
 .artist-title {
-    margin: 12px 0 0;
-    font-size: 1rem;
+    margin: 10px 0 0;
+    font-size: 0.98rem;
     font-weight: 700;
     line-height: 1.35;
 }
 
 .artist-description {
-    margin: 12px 0 0;
-    font-size: 0.94rem;
-    line-height: 1.7;
-    opacity: 0.8;
-    min-height: 3.4em;
+    margin: 8px 0 0;
+    font-size: 0.88rem;
+    line-height: 1.5;
+    opacity: 0.7;
+    font-style: italic;
+    opacity: 0.75;
 }
 
 .artist-actions {
@@ -739,8 +747,7 @@ a {
     opacity: 0.33;
     background-size: 20px 20px, 20px 20px;
     filter:
-        drop-shadow(0 0 7px var(--glow-violeta))
-        drop-shadow(0 0 7px var(--glow-rosa));
+        drop-shadow(0 0 7px var(--glow-violeta)) drop-shadow(0 0 7px var(--glow-rosa));
 }
 
 /* HERO EXTRA GRAPHIC */
@@ -753,13 +760,11 @@ a {
     left: 72%;
     top: 58%;
     transform: translate(-50%, -50%);
-    background: repeating-conic-gradient(
-        rgba(255, 255, 255, 0.92) 0deg 3deg,
-        transparent 3deg 12deg
-    );
+    background: repeating-conic-gradient(rgba(255, 255, 255, 0.92) 0deg 3deg,
+            transparent 3deg 12deg);
     opacity: 0.42;
     pointer-events: none;
-    filter: drop-shadow(0 0 8px rgba(255,255,255,0.24));
+    filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.24));
 }
 
 .hero-night::before {
@@ -780,9 +785,11 @@ a {
     0% {
         transform: scale(1) rotate(0deg);
     }
+
     50% {
         transform: scale(1.03) rotate(1.5deg);
     }
+
     100% {
         transform: scale(1) rotate(0deg);
     }
@@ -857,6 +864,7 @@ a {
 }
 
 @media (max-width: 640px) {
+
     .container,
     .narrow {
         width: min(1200px, calc(100% - 24px));
