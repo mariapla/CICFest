@@ -94,7 +94,7 @@ const speakers = [
     {
         name: 'Carlos Pareja',
         role: 'Talk',
-        title: 'Prefiero ser un indio que un importante abogado',
+        title: 'La fotografía como oficio vs la fotografía como hobby',
         time: '13:00',
         track: 'day',
         image: 'img/Carlos_Pareja.jpg',
