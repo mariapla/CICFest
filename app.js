@@ -98,7 +98,7 @@ const speakers = [
         title: 'Mentoring',
         time: '18:00',
         track: 'night',
-        image: 'img/night.jpg',
+        image: 'img/cicfestnight.jpg',
         ticketUrl: '#'
     }
 ];
