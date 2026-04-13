@@ -387,7 +387,7 @@ a {
 }
 
 .button-night {
-    background: var(--blanco);
+    background: var(--rosa);
     color: var(--violeta);
 }
 
@@ -641,7 +641,7 @@ a {
 .reveal {
     opacity: 0;
     transform: translate3d(0, 90px, 0) scale(0.95);
-    filter: blur(10px);
+    filter: blur(4px);
     transition:
         opacity 1.25s ease,
         transform 1.25s cubic-bezier(0.16, 1, 0.3, 1),
@@ -658,7 +658,7 @@ a {
 .reveal-left {
     opacity: 0;
     transform: translate3d(-90px, 44px, 0) scale(0.95);
-    filter: blur(10px);
+    filter: blur(4px);
     transition:
         opacity 1.25s ease,
         transform 1.25s cubic-bezier(0.16, 1, 0.3, 1),
@@ -669,7 +669,7 @@ a {
 .reveal-right {
     opacity: 0;
     transform: translate3d(90px, 44px, 0) scale(0.95);
-    filter: blur(10px);
+    filter: blur(4px);
     transition:
         opacity 1.25s ease,
         transform 1.25s cubic-bezier(0.16, 1, 0.3, 1),

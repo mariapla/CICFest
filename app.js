@@ -32,7 +32,7 @@ const speakers = [
     {
         name: 'Juan Cardosa',
         role: 'Workshop',
-        title: 'Micropoesia i collage',
+        title: 'Taller de Micropoesía: de lo visual a la letra y viceversa',
         time: '09:00',
         track: 'day',
         image: 'img/juan_cardosa.jpg',
@@ -68,7 +68,7 @@ const speakers = [
     {
         name: 'Mireia Domènech i Silvana Solias',
         role: 'Talk',
-        title: 'Dissenyar cultura',
+        title: 'Trabajo creativo: Un ejercicio de preguntas y respuestas',
         time: '11:30',
         track: 'day',
         image: 'img/misterio_studio.jpg',
@@ -77,7 +77,7 @@ const speakers = [
     {
         name: 'Riki Blanco',
         role: 'Workshop',
-        title: 'Taller concentrado de ilustración conceptual',
+        title: 'Taller de Ilustración. Es decir: taller de ilustración conceptual',
         time: '10:00',
         track: 'day',
         image: 'img/Riki_Blanco.jpg',
@@ -86,7 +86,7 @@ const speakers = [
     {
         name: 'Carlos Pareja',
         role: 'Talk',
-        title: 'No vull ser com tu i la meva divertida vida com a fotògraf',
+        title: 'Prefiero ser un indio que un importante abogado',
         time: '13:00',
         track: 'day',
         image: 'img/Carlos_Pareja.jpg',
