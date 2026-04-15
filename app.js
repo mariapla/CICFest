@@ -13,7 +13,7 @@ const festival = {
 
     eventbrite: {
         day: '#',
-        night: '#'
+        night: 'https://www.eventbrite.com/e/cic-fest-night-tickets-1987488386265?utm-campaign=social&utm-content=attendeeshare&utm-medium=discovery&utm-term=listing&utm-source=cp&aff=ebdsshcopyurl'
     }
 };
 
@@ -108,7 +108,7 @@ const speakers = [
         time: '18:00',
         track: 'night',
         image: 'img/cicfestnight.jpg',
-        ticketUrl: '#',
+        ticketUrl: 'https://www.eventbrite.com/e/cic-fest-night-tickets-1987488386265?utm-campaign=social&utm-content=attendeeshare&utm-medium=discovery&utm-term=listing&utm-source=cp&aff=ebdsshcopyurl',
         description: 'Revisions ràpides de portafoli per connectar amb professionals del sector.'
     }
 ];
