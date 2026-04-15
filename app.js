@@ -12,7 +12,7 @@ const festival = {
     introText2: 'Al DAY els tallers ofereixen un espai pràctic i al NIGHT la Portfolio Night connecta estudiants amb professionals.',
 
     eventbrite: {
-        day: '#',
+        day: 'https://www.eventbrite.com/e/entradas-cic-fest-day-1986003813869?aff=oddtdtcreator',
         night: 'https://www.eventbrite.com/e/cic-fest-night-tickets-1987488386265?utm-campaign=social&utm-content=attendeeshare&utm-medium=discovery&utm-term=listing&utm-source=cp&aff=ebdsshcopyurl'
     }
 };
@@ -27,18 +27,18 @@ const speakers = [
         time: '08:30',
         track: 'day',
         image: 'img/maria_canizares.jpg',
-        ticketUrl: '#',
+        ticketUrl: 'https://www.eventbrite.com/e/entradas-cic-fest-day-1986003813869?aff=oddtdtcreator',
         description: 'Explorar com l’espai pot narrar històries i generar experiència.'
     },
     {
-        name: 'Juan Cardosa',
+        name: 'Carlota Marquina',
         role: 'Workshop',
-        title: 'Taller de Micropoesía: de lo visual a la letra y viceversa',
+        title: 'Música i paisatge',
         time: '09:00',
         track: 'day',
-        image: 'img/juan_cardosa.jpg',
-        ticketUrl: '#', 
-        description: 'Jugar amb paraula i imatge per crear relats mínims i poètics.'
+        image: 'img/Carlota_Marquina.jpg',
+        ticketUrl: 'https://www.eventbrite.com/e/entradas-cic-fest-day-1986003813869?aff=oddtdtcreator', 
+        description: 'Interpretar o fer una abstracció, a través de la tècnica del collage, d’un àlbum icònic de la història de la música pop, rock, etc.'
     },
     {
         name: 'Riki Blanco',
@@ -47,7 +47,7 @@ const speakers = [
         time: '10:00',
         track: 'day',
         image: 'img/Riki_Blanco.jpg',
-        ticketUrl: '#',
+        ticketUrl: 'https://www.eventbrite.com/e/entradas-cic-fest-day-1986003813869?aff=oddtdtcreator',
         description: 'Una mirada al procés creatiu des de la intuïció, l’error i el joc.'
 
     },
@@ -58,7 +58,7 @@ const speakers = [
         time: '11:00',
         track: 'day',
         image: 'img/txu_morillas.jpg',
-        ticketUrl: '#',
+        ticketUrl: 'https://www.eventbrite.com/e/entradas-cic-fest-day-1986003813869?aff=oddtdtcreator',
         description: 'Investigar el moviment i la seva traducció en llenguatge visual.'
     },
     {
@@ -68,7 +68,7 @@ const speakers = [
         time: '11:15',
         track: 'day',
         image: 'img/santi_vilanova.png',
-        ticketUrl: '#',
+        ticketUrl: 'https://www.eventbrite.com/e/entradas-cic-fest-day-1986003813869?aff=oddtdtcreator',
         description: 'Experimentar amb sistemes generatius on codi, art i so es troben.'
     },
     {
@@ -78,7 +78,7 @@ const speakers = [
         time: '11:30',
         track: 'day',
         image: 'img/misterio_studio.jpg',
-        ticketUrl: '#',
+        ticketUrl: 'https://www.eventbrite.com/e/entradas-cic-fest-day-1986003813869?aff=oddtdtcreator',
         description: "Reflexionar sobre com es dissenya cultura i es construeixen contextos."
     },
     {
@@ -88,7 +88,7 @@ const speakers = [
         time: '10:00',
         track: 'day',
         image: 'img/Riki_Blanco.jpg',
-        ticketUrl: '#',
+        ticketUrl: 'https://www.eventbrite.com/e/entradas-cic-fest-day-1986003813869?aff=oddtdtcreator',
         description: "Exercicis de síntesi visual per pensar idees complexes des de la imatge."
     },
     {
@@ -98,7 +98,7 @@ const speakers = [
         time: '13:00',
         track: 'day',
         image: 'img/Carlos_Pareja.jpg',
-        ticketUrl: '#',
+        ticketUrl: 'https://www.eventbrite.com/e/entradas-cic-fest-day-1986003813869?aff=oddtdtcreator',
         description: "Una aproximació honesta i personal a la pràctica fotogràfica actual."
     },
     {
