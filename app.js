@@ -85,7 +85,7 @@ const speakers = [
         name: 'Riki Blanco',
         role: 'Workshop',
         title: 'Taller de Ilustración. Es decir: taller de ilustración conceptual',
-        time: '10:00',
+        time: '12:15',
         track: 'day',
         image: 'img/Riki_Blanco.jpg',
         ticketUrl: 'https://www.eventbrite.com/e/entradas-cic-fest-day-1986003813869?aff=oddtdtcreator',
